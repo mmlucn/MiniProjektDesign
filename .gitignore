@@ -26,3 +26,7 @@ hs_err_pid*
 
 controller/package.bluej
 *.bluej
+package.bluej
+tui/package.bluej
+tui/package.bluej
+package.bluej
