@@ -74,19 +74,26 @@ public class PersonController
         // else{ 
             // System.out.println("No CD called" + person + " within the collection");
         // }
+        //------
+        // Iterator<Person> it = persons.iterator();
+        // while(it.hasNext()){
+            // Person p= it.next();
+            // if(p.getphoneNumber().equals(phoneNumber){
+                // it.remove();
+            // }
+            // else{
+                // system.out.println("Person not found, piss off");
+            // }
+        // }
         
-        Iterator<Person> it = persons.iterator();
-        while(it.hasNext()){
-            Person p= it.next();
-            if(p.getphoneNumber().equals(phoneNumber){
-                it.remove();
-            }
-            else{
-                system.out.println("Person not found, piss off");
-            }
-        }
+        Person p = null;      
+        int index = 0;     
+        boolean found = false; 
+            p = persons.get(index); 
+            if(p.getPhoneNumber().equals(phoneNumber).remove(p)){ 
+        
     }
-    
+    }
     
     public void addPerson(Person p){    
         personContainer.addPerson(p);
