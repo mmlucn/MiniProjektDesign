@@ -1,13 +1,6 @@
 package model;
 import java.util.ArrayList;
 
-
-/**
- * Write a description of class PersonContainer here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class PersonContainer
 {
     private static PersonContainer instance;
