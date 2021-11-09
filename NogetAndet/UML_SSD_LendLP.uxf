@@ -58,7 +58,7 @@ _+getInstance() : LoanContainer_
 2.1: fp = findPerson(phoneNumber : String): Person
 3.1: copy = findCopy(serialNumber : String): Copy</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>320</x><y>770</y><w>110</w><h>30</h></coordinates><panel_attributes>_:LoanCtr_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>950</y><w>110</w><h>30</h></coordinates><panel_attributes>_:Loan_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>790</y><w>280</w><h>180</h></coordinates><panel_attributes>lt=&lt;-
 1.1.1: aLoan = &lt;&lt;create&gt;&gt;(period : String)
-2.1.1: fp = &lt;&lt;findPerson&gt;&gt;(phoneNumber : String)
+2.1.2: addPerson(fp : Person) : void
 3.1.1: copy = &lt;&lt;findCopy&gt;&gt;(serialNumber : String)</panel_attributes><additional_attributes>10;160;10;60;120;10</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>650</y><w>240</w><h>60</h></coordinates><panel_attributes>lt=&lt;-
 1: createLoan
 2: findPerson
@@ -204,4 +204,7 @@ person.city became city and person.phone became phone</panel_attributes><additio
 Use case: CRUD Person 
 Pre-condition: Person-object person exists 
 Post condition:
-· person was deleted</panel_attributes><additional_attributes></additional_attributes></element></diagram>
+· person was deleted</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>160</x><y>770</y><w>110</w><h>30</h></coordinates><panel_attributes>_:LPCtr_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>770</y><w>350</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+2.1.1: fp = findPerson(phoneNumber : String): Person</panel_attributes><additional_attributes>330;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>760</x><y>980</y><w>110</w><h>30</h></coordinates><panel_attributes>_:PersonContainer_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>790</y><w>320</w><h>210</h></coordinates><panel_attributes>lt=&lt;-
+2.1.1.1: fp = findPerson(phoneNumber : String): Person</panel_attributes><additional_attributes>10;190;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>754</x><y>1124</y><w>110</w><h>30</h></coordinates><panel_attributes>_:Person_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>744</x><y>774</y><w>110</w><h>30</h></coordinates><panel_attributes>_:PersonCtr_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>804</x><y>1000</y><w>310</w><h>150</h></coordinates><panel_attributes>lt=&lt;-
+2.1.1.1.1 phone = *[i=1..n]getPhoneNumber(): String</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element></diagram>
