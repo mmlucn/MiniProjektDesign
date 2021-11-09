@@ -1,5 +1,6 @@
 package controller;
 import model.*;
+import java.util.Iterator;
 
 public class PersonController
 {
@@ -37,7 +38,56 @@ public class PersonController
             personToUpdate.setPhoneNumber(phoneNumber);
         }
     }
-
+    
+    // public Person deletePerson(String phoneNumber){
+        // Person p = null;      
+        // int index = 0;     
+        // boolean found = false; 
+        // while(index < personContainer.persons.size() && !found){
+            // p = persons.get(index); 
+            // if(p.getPhoneNumber().equals(phoneNumber).delete(person)){ 
+                // found = true;
+            // }
+            // else{
+                 // index++; 
+                // }
+         // } 
+        // if (found){
+            // return persons.get(index);
+        // }
+        // else{   
+         // return null;
+        // }
+    // }
+    
+    public Person deletePerson(String phoneNumber){
+        // Person p = findPerson(phoneNumber); 
+        // if(p != null){
+            // boolean ok = persons.remove(p); //remove an object
+            // if(ok){
+                // System.out.println("Cd with title " + person + "has been removed");
+            // }
+            // else{
+                // System.out.println("Removal failed");
+            // }
+        // }
+        // else{ 
+            // System.out.println("No CD called" + person + " within the collection");
+        // }
+        
+        Iterator<Person> it = persons.iterator();
+        while(it.hasNext()){
+            Person p= it.next();
+            if(p.getphoneNumber().equals(phoneNumber){
+                it.remove();
+            }
+            else{
+                system.out.println("Person not found, piss off");
+            }
+        }
+    }
+    
+    
     public void addPerson(Person p){    
         personContainer.addPerson(p);
     }
