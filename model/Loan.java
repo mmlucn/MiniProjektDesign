@@ -3,8 +3,7 @@ import java.time.LocalDate;
 
 
 
-public class Loan
-{
+public class Loan{
     private String title;
     private String loanNumber;
     private LocalDate borrowDate;
@@ -13,8 +12,7 @@ public class Loan
     private Person person;
     private Copy copy;
     
-    public Loan(String title, String loanNumber, String quality, int days, Person person, Copy copy)
-    {
+    public Loan(String title, String loanNumber, String quality, int days, Person person, Copy copy){
         this.title = title;
         this.loanNumber = loanNumber;
         this.returnDate = LocalDate.now().plusDays(days);

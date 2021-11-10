@@ -1,13 +1,9 @@
 package model;
 import java.util.ArrayList;
 
-public class PersonContainer
-{
+public class PersonContainer{
     private static PersonContainer instance;
     private ArrayList<Person> persons;    
-    /**
-     * Constructor for objects of class PersonContainer
-     */
     public PersonContainer(){
         persons = new ArrayList<>();
    }

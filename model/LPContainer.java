@@ -3,8 +3,7 @@ package model;
 import java.util.ArrayList;
 
 
-public class LPContainer
-{
+public class LPContainer{
     private static LPContainer instance;
     private ArrayList<LP> LPs;
     
@@ -38,6 +37,5 @@ public class LPContainer
             LPs.add(newLP);
         }
     }
-    
     
 }

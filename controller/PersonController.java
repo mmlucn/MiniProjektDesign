@@ -1,17 +1,11 @@
 package controller;
 import model.*;
-import java.util.Iterator;
 
-public class PersonController
-{
+public class PersonController{
     private PersonContainer personContainer;
 
-    /**
-     * Constructor for objects of class PersonController
-     */
-    public PersonController()
-    {
-        this.personContainer = personContainer.getInstance();
+    public PersonController(){
+        personContainer = personContainer.getInstance();
     }
 
     public Person createPerson(String name, String address, String postalCode, String city, 

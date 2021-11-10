@@ -3,14 +3,12 @@ package model;
 import java.util.ArrayList;
 
 
-public class LoanContainer
-{
+public class LoanContainer{
     private static LoanContainer instance;
     private ArrayList<Loan> loans;
     
     
-    private LoanContainer()
-    {
+    private LoanContainer(){
         loans = new ArrayList<Loan>();
     }
     
