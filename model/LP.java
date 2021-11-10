@@ -36,6 +36,17 @@ public class LP {
         return null;
     }
     
+    public Copy getCopy(){
+        if (copies != null){
+            for (Copy copy : copies){
+                if (copy.isAvailable()){
+                    return copy;
+                }
+            }
+        }
+        return null;
+    }
+
     public String getBarcode() {
         return barcode;
     }

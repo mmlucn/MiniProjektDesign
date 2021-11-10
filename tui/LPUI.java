@@ -1,4 +1,6 @@
 package tui;
+import javax.lang.model.util.ElementScanner6;
+
 import controller.*;
 
 /**
@@ -16,8 +18,30 @@ public class LPUI
         lpController = new LPController();
     }
     
+    public void start(){
+        boolean running = true;
+        while (running) {
+            int choice = writeLPMenu();
+            if (choice == 1){
+                for (String lpInfoString : lpController.getAllLPs()) {
+                    System.out.println(lpInfoString);
+                }
+            }
+            else if(choice == 2){
+                
+
+            }
+            else{
+                running = false;
+            }
+        }
+    }
+
     private int writeLPMenu(){
         TextOptions menu = new TextOptions("\n ***** LP Menu *****", "Tilbage");
-        return 0;
+        menu.addOption("Vis alle EP'er");
+        menu.addOption("Søg på title");
+        int choice = menu.prompt();
+        return choice;
     }
 }

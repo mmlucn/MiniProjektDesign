@@ -1,4 +1,6 @@
 package controller;
+import java.util.ArrayList;
+
 import model.*;
 
 public class LPController{
@@ -22,6 +24,10 @@ public class LPController{
         if (lpContainer != null){
             lpContainer.addLP(lp);
         }
+    }
+
+    public ArrayList<String> getAllLPs(){
+        return lpContainer.getAllLPs();
     }
     
     public LP createLP(String barcode, String title, String artist, String publicationDate)

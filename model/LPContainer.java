@@ -38,5 +38,12 @@ public class LPContainer{
         }
     }
 
+    public ArrayList<String> getAllLPs(){
+        ArrayList<String> returnList = new ArrayList<>();
+        for (LP lp : LPs) {
+            returnList.add(lp.getTitle() + " - " + lp.getArtist());
+        }
+        return returnList;
+    }
     
 }

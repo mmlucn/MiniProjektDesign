@@ -1,7 +1,5 @@
 package controller;
 import model.*;
-import java.util.Date;
-import java.time.LocalDate;
 
 
 public class LoanController{
@@ -15,27 +13,20 @@ public class LoanController{
         lpController = new LPController();
     }
     
-    public boolean createLoan(String phoneNumber, String title, String serialNumber, String quality, int days){
-        boolean found = true;
+    public boolean createLoan(String phoneNumber, String title, String quality, int days){
+        boolean succes = true;
         Person person = personController.findPerson(phoneNumber);
-        if(person == null){
-            found = false;
-        }
         LP lp = lpController.findLP(title);
-        if(lp == null){
-            found = false;
-        }
-        Copy copy = lp.findCopy(serialNumber);
-        if(copy == null){
-            found = false;
-        }
+        Copy copy = lp.getCopy();
         Loan loan = new Loan(lp.getTitle(), "detteSkalGenereres", quality, days, person, copy);
-        loanContainer.addLoan(loan);
-        if(loan == null){
-            found = false;
+        if (loanContainer.addLoan(loan)){
+            succes = true;
         }
-        
-        return found;
+        else{
+            succes = false;
+        }
+        return succes;
     }
+    
     
 }

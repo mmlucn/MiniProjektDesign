@@ -5,7 +5,7 @@ public class PersonController{
     private PersonContainer personContainer;
     
     public PersonController(){
-        personContainer = personContainer.getInstance();
+        personContainer = PersonContainer.getInstance();
     }
 
     public Person createPerson(String name, String address, String postalCode, String city, 

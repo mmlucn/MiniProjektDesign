@@ -1,61 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="14.3.0">
-  <help_text>Space for diagram notes</help_text>
-  <zoom_level>5</zoom_level>
-  <element>
-    <id>UMLPackage</id>
-    <coordinates>
-      <x>755</x>
-      <y>285</y>
-      <w>635</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>controllerlayer
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLPackage</id><coordinates><x>1510</x><y>590</y><w>1270</w><h>200</h></coordinates><panel_attributes>controllerlayer
 --
 
 
-fg=red</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLPackage</id>
-    <coordinates>
-      <x>755</x>
-      <y>185</y>
-      <w>635</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>tuilayer
+fg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1510</x><y>390</y><w>1270</w><h>180</h></coordinates><panel_attributes>tuilayer
 --
 
 
-fg=red</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLPackage</id>
-    <coordinates>
-      <x>755</x>
-      <y>385</y>
-      <w>635</w>
-      <h>320</h>
-    </coordinates>
-    <panel_attributes>modellayer
+fg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1510</x><y>790</y><w>1270</w><h>640</h></coordinates><panel_attributes>modellayer
 --
 
 
-fg=red</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1145</x>
-      <y>195</y>
-      <w>225</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>PersonUI
+fg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2290</x><y>410</y><w>450</w><h>160</h></coordinates><panel_attributes>PersonUI
 -
 -personController : PersonController
 -
@@ -64,18 +19,7 @@ fg=red</panel_attributes>
 +findPerson(): Person
 +updatePerson(name : String, phoneNumber : String, 
   address : String, postalCode : String, city : String) : Person
-+deletePerson(phoneNumber : String) : Person</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>970</x>
-      <y>305</y>
-      <w>125</w>
-      <h>75</h>
-    </coordinates>
-    <panel_attributes>LoanController
++deletePerson(phoneNumber : String) : Person</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1940</x><y>630</y><w>250</w><h>150</h></coordinates><panel_attributes>LoanController
 -
 -loanContainer : LoanContainer
 -personController : PersonController
@@ -83,18 +27,7 @@ fg=red</panel_attributes>
 -
 +createLoan(phonenumber : String, serialNumber : String, 
 quality : String, days : int) : Loan
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>970</x>
-      <y>410</y>
-      <w>115</w>
-      <h>85</h>
-    </coordinates>
-    <panel_attributes>                                                 1
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1940</x><y>840</y><w>230</w><h>170</h></coordinates><panel_attributes>                                                 1
 LoanContainer
 -
 -Loans: ArrayList&lt;Loan&gt;
@@ -103,51 +36,7 @@ _-instance : LoanContainer_
 -&lt;&lt;constructor&gt;&gt; LoanContainer()
 _+getInstance() : LoanContainer_
 +addLoan(loan : Loan)
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1020</x>
-      <y>260</y>
-      <w>15</w>
-      <h>55</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1020</x>
-      <y>375</y>
-      <w>15</w>
-      <h>45</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1020</x>
-      <y>490</y>
-      <w>15</w>
-      <h>35</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>980</x>
-      <y>515</y>
-      <w>90</w>
-      <h>115</h>
-    </coordinates>
-    <panel_attributes>loans[i] : Loan
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2040</x><y>540</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2040</x><y>770</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2040</x><y>1000</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1960</x><y>1050</y><w>180</w><h>230</h></coordinates><panel_attributes>loans[i] : Loan
 -
 -title : String
 -loanNumber : String
@@ -162,242 +51,55 @@ _+getInstance() : LoanContainer_
 +getBorrowDate(): LocalDate
 +getReturnDate(): LocalDate
 +getQuality(): String
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>275</x>
-      <y>410</y>
-      <w>190</w>
-      <h>95</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-1.1.2: addLoan(aLoan : Loan)</panel_attributes>
-    <additional_attributes>180.0;170.0;180.0;60.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>345</x>
-      <y>495</y>
-      <w>55</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>_:LoanContainer_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>240</x>
-      <y>345</y>
-      <w>55</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>_:LoanUI_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>260</x>
-      <y>355</y>
-      <w>175</w>
-      <h>55</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>840</y><w>360</w><h>190</h></coordinates><panel_attributes>lt=&lt;-
+1.1.2: addLoan(aLoan : Loan)</panel_attributes><additional_attributes>180;170;180;60;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>1010</y><w>110</w><h>30</h></coordinates><panel_attributes>_:LoanContainer_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>710</y><w>110</w><h>30</h></coordinates><panel_attributes>_:LoanUI_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>730</y><w>300</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
 1.1: aLoan = createLoan(period : String): Loan
 2.1: fp = findPerson(phoneNumber : String): Person
 3.1: lp=findLP(title : String)
-4.1: copy = findCopy(serialNumber : String): Copy</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>240</x>
-      <y>400</y>
-      <w>55</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>_:LoanCtr_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>180</x>
-      <y>490</y>
-      <w>55</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>_aLoan:Loan_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>200</x>
-      <y>410</y>
-      <w>135</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
+4.1: copy = findCopy(serialNumber : String): Copy</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>820</y><w>110</w><h>30</h></coordinates><panel_attributes>_:LoanCtr_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>1000</y><w>110</w><h>30</h></coordinates><panel_attributes>_aLoan:Loan_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>840</y><w>240</w><h>180</h></coordinates><panel_attributes>lt=&lt;-
 1.1.1: aLoan = &lt;&lt;create&gt;&gt;(period : String)
 2.1.2: addPerson(fp : Person) : void
 3.1.2: addLP(lp : LP)
-4.1.2: addCopy(copy: Copy) : void</panel_attributes>
-    <additional_attributes>10.0;160.0;10.0;60.0;120.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>130</x>
-      <y>340</y>
-      <w>120</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
+4.1.2: addCopy(copy: Copy) : void</panel_attributes><additional_attributes>10;160;10;60;120;10</additional_attributes></element><element><id>Relation</id><coordinates><x>260</x><y>700</y><w>240</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
 1: createLoan
 2: findPerson
 3: findLP
-4: findCopy</panel_attributes>
-    <additional_attributes>220.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1440</x>
-      <y>235</y>
-      <w>55</w>
-      <h>55</h>
-    </coordinates>
-    <panel_attributes>Loan
+4: findCopy</panel_attributes><additional_attributes>220;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2880</x><y>490</y><w>110</w><h>110</h></coordinates><panel_attributes>Loan
 --
 title
 loanNumber
 borrowDate
 returnDate
 quality
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1560</x>
-      <y>225</y>
-      <w>55</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>LP
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>3120</x><y>470</y><w>110</w><h>100</h></coordinates><panel_attributes>LP
 --
 barcode
 title
 artist
-publicationDate</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1490</x>
-      <y>250</y>
-      <w>80</w>
-      <h>20</h>
-    </coordinates>
-    <panel_attributes>lt=-
+publicationDate</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2980</x><y>520</y><w>160</w><h>40</h></coordinates><panel_attributes>lt=-
 m1= 1
-m2=1</panel_attributes>
-    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1460</x>
-      <y>185</y>
-      <w>25</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>lt=-
+m2=1</panel_attributes><additional_attributes>10;10;140;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2920</x><y>390</y><w>50</w><h>120</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=0..*
 
-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1560</x>
-      <y>320</y>
-      <w>55</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Copy
+</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>3120</x><y>660</y><w>110</w><h>80</h></coordinates><panel_attributes>Copy
 --
 serialNumber
 purchaseDate
-purchasePrice</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1440</x>
-      <y>130</y>
-      <w>55</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>Person
+purchasePrice</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2880</x><y>280</y><w>110</w><h>120</h></coordinates><panel_attributes>Person
 --
 name
 address
 postalCode
 city
-phoneNumber</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1580</x>
-      <y>270</y>
-      <w>25</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+phoneNumber</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>3160</x><y>560</y><w>50</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=1
-m2=0..*</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>975</x>
-      <y>210</y>
-      <w>115</w>
-      <h>55</h>
-    </coordinates>
-    <panel_attributes>LoanUI
+m2=0..*</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1950</x><y>440</y><w>230</w><h>110</h></coordinates><panel_attributes>LoanUI
 -
 -loanController : LoanController
 -
 +createLoan(period : String): Loan
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1145</x>
-      <y>300</y>
-      <w>225</w>
-      <h>85</h>
-    </coordinates>
-    <panel_attributes>PersonController
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2290</x><y>620</y><w>450</w><h>170</h></coordinates><panel_attributes>PersonController
 -
 -personContainer : PersonContainer
 -
@@ -406,29 +108,7 @@ m2=0..*</panel_attributes>
 +findPerson(pgoneNumber : String): Person
 +updatePerson(name : String, phoneNumber : String, 
   address : String, postalCode : String, city : String) : Person
-+deletePerson(phoneNumber : String) : Person</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1250</x>
-      <y>270</y>
-      <w>15</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1145</x>
-      <y>400</y>
-      <w>225</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>                                                 1
++deletePerson(phoneNumber : String) : Person</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2500</x><y>560</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2290</x><y>820</y><w>450</w><h>200</h></coordinates><panel_attributes>                                                 1
 PersonContainer
 -
 -Persons: ArrayList&lt;person&gt;
@@ -437,40 +117,7 @@ _-instance : PersonContainer_
 -&lt;&lt;constructor&gt;&gt; PersonContainer()
 _+getInstance() : PersonContainer_
 +addPerson(name : String, phoneNumber : String, 
-  address : String, postalCode : String, city : String): Person</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1250</x>
-      <y>380</y>
-      <w>15</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1260</x>
-      <y>495</y>
-      <w>15</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1145</x>
-      <y>545</y>
-      <w>225</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>persons[i] : Person
+  address : String, postalCode : String, city : String): Person</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2500</x><y>780</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2520</x><y>1010</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2290</x><y>1110</y><w>450</w><h>240</h></coordinates><panel_attributes>persons[i] : Person
 -
 -persons : ArrayList&lt;Person&gt;
 -name : String
@@ -483,18 +130,7 @@ _+getInstance() : PersonContainer_
 +getName() : String
 +getAddress() : String
 +getPostalCode() : String
-+getCity() : String</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>485</x>
-      <y>125</y>
-      <w>250</w>
-      <h>155</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
++getCity() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>970</x><y>270</y><w>470</w><h>310</h></coordinates><panel_attributes>lt=&lt;-
 1.1.2: addPerson(p:Person)
 2.1.2: findPerson(p:Person)
 3.1.2: updatePerson(p:person)
@@ -502,315 +138,51 @@ _+getInstance() : PersonContainer_
 
 
 
-</panel_attributes>
-    <additional_attributes>290.0;290.0;290.0;30.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>600</x>
-      <y>270</y>
-      <w>60</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>_:PersonContainer_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>435</x>
-      <y>5</y>
-      <w>55</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>_:PersonUI_
- </panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>455</x>
-      <y>15</y>
-      <w>245</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
+</panel_attributes><additional_attributes>290;290;290;30;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1200</x><y>560</y><w>120</w><h>30</h></coordinates><panel_attributes>_:PersonContainer_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>870</x><y>30</y><w>110</w><h>30</h></coordinates><panel_attributes>_:PersonUI_
+ </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>910</x><y>50</y><w>430</w><h>220</h></coordinates><panel_attributes>lt=&lt;-
 1.1: cp = createPerson(name:String, address:String, 
                                     postalCode:String, city:String, phone:String): Person
 2.1: fp = findPerson(phoneNumber : String): Person
 3.1: up = updatePerson(name : String, phoneNumber : String, 
               address : String, postalCode : String, city : String): Person
-4.1: dp = deletePerson(phoneNumber : String) : Person</panel_attributes>
-    <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>435</x>
-      <y>115</y>
-      <w>55</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>_:PersonCtr_
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>270</x>
-      <y>240</y>
-      <w>55</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>_:Person_
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>290</x>
-      <y>125</y>
-      <w>335</w>
-      <h>125</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
+4.1: dp = deletePerson(phoneNumber : String) : Person</panel_attributes><additional_attributes>10;200;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>870</x><y>250</y><w>110</w><h>30</h></coordinates><panel_attributes>_:PersonCtr_
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>500</y><w>110</w><h>30</h></coordinates><panel_attributes>_:Person_
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>580</x><y>270</y><w>570</w><h>250</h></coordinates><panel_attributes>lt=&lt;-
 1.1.1: cp = &lt;&lt;create&gt;&gt;(name:String, address:String, postalCode:String, city:String, phone:String)
 2.1.1: fp = &lt;&lt;find&gt;&gt;(phoneNumber : String)
 3.1.1: up = &lt;&lt;update&gt;&gt;(name:String, address:String, postalCode:String, city:String, phoneNumber:String)
 4.1.1: dp = &lt;&lt;delete&gt;&gt;(phoneNumber : String) 
 
 
-</panel_attributes>
-    <additional_attributes>10.0;230.0;10.0;30.0;290.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>250</x>
-      <y>0</y>
-      <w>195</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
+</panel_attributes><additional_attributes>10;230;10;30;290;10</additional_attributes></element><element><id>Relation</id><coordinates><x>500</x><y>20</y><w>390</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
 1: createPerson()
 2: findPerson()
 3:updatePerson()
-4:deletePerson()</panel_attributes>
-    <additional_attributes>370.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1850</x>
-      <y>195</y>
-      <w>50</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>_:System_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLActor</id>
-    <coordinates>
-      <x>1705</x>
-      <y>170</y>
-      <w>30</w>
-      <h>55</h>
-    </coordinates>
-    <panel_attributes>Cashier</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1870</x>
-      <y>210</y>
-      <w>15</w>
-      <h>180</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;340.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1725</x>
-      <y>215</y>
-      <w>15</w>
-      <h>175</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;330.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1725</x>
-      <y>250</y>
-      <w>160</w>
-      <h>25</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
+4:deletePerson()</panel_attributes><additional_attributes>370;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>3700</x><y>410</y><w>100</w><h>30</h></coordinates><panel_attributes>_:System_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLActor</id><coordinates><x>3410</x><y>360</y><w>60</w><h>110</h></coordinates><panel_attributes>Cashier</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>3740</x><y>440</y><w>30</w><h>360</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;340</additional_attributes></element><element><id>Relation</id><coordinates><x>3450</x><y>450</y><w>30</w><h>350</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;330</additional_attributes></element><element><id>Relation</id><coordinates><x>3450</x><y>520</y><w>320</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
 findPerson(name, phone number)
-</panel_attributes>
-    <additional_attributes>300.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1725</x>
-      <y>265</y>
-      <w>160</w>
-      <h>20</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-Person</panel_attributes>
-    <additional_attributes>10.0;20.0;300.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1725</x>
-      <y>320</y>
-      <w>160</w>
-      <h>20</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-findCopy(serialNumber)</panel_attributes>
-    <additional_attributes>300.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1720</x>
-      <y>330</y>
-      <w>160</w>
-      <h>20</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-Copy</panel_attributes>
-    <additional_attributes>10.0;20.0;300.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1725</x>
-      <y>350</y>
-      <w>160</w>
-      <h>20</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-saveLoan()</panel_attributes>
-    <additional_attributes>300.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1725</x>
-      <y>360</y>
-      <w>160</w>
-      <h>20</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-O.K.</panel_attributes>
-    <additional_attributes>10.0;20.0;300.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1715</x>
-      <y>285</y>
-      <w>175</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1430</x>
-      <y>565</y>
-      <w>185</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>Operationskontrakt: findCopy(serialNumber)
+</panel_attributes><additional_attributes>300;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>3450</x><y>550</y><w>320</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+Person</panel_attributes><additional_attributes>10;20;300;20</additional_attributes></element><element><id>Relation</id><coordinates><x>3450</x><y>660</y><w>320</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+findCopy(serialNumber)</panel_attributes><additional_attributes>300;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>3440</x><y>680</y><w>320</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+Copy</panel_attributes><additional_attributes>10;20;300;20</additional_attributes></element><element><id>Relation</id><coordinates><x>3450</x><y>720</y><w>320</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+saveLoan()</panel_attributes><additional_attributes>300;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>3450</x><y>740</y><w>320</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+O.K.</panel_attributes><additional_attributes>10;20;300;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>3430</x><y>590</y><w>350</w><h>120</h></coordinates><panel_attributes></panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2860</x><y>1150</y><w>370</w><h>100</h></coordinates><panel_attributes>Operationskontrakt: findCopy(serialNumber)
 -
 use case: Lend LP
 Preconditions: LP is found
 Postconditions: 
-- Copy is found</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1430</x>
-      <y>455</y>
-      <w>185</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>Operationskontrakt: findPerson(Name, Phone Number)
+- Copy is found</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2860</x><y>930</y><w>370</w><h>100</h></coordinates><panel_attributes>Operationskontrakt: findPerson(Name, Phone Number)
 -
 use case: Lend LP
 Preconditions: Person exists
 Postconditions: 
-- Person is found</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1725</x>
-      <y>220</y>
-      <w>160</w>
-      <h>25</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
+- Person is found</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>3450</x><y>460</y><w>320</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
 createLoan(period)
-</panel_attributes>
-    <additional_attributes>300.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1725</x>
-      <y>235</y>
-      <w>160</w>
-      <h>20</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-O.K.</panel_attributes>
-    <additional_attributes>10.0;20.0;300.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1430</x>
-      <y>400</y>
-      <w>185</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>Operationskontrakt: createLoan(period)
+</panel_attributes><additional_attributes>300;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>3450</x><y>490</y><w>320</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+O.K.</panel_attributes><additional_attributes>10;20;300;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2860</x><y>820</y><w>370</w><h>100</h></coordinates><panel_attributes>Operationskontrakt: createLoan(period)
 -
 use case: Lend LP
 Preconditions: A person wants to borrow a LP.
-Postconditions: Loan is created</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1625</x>
-      <y>400</y>
-      <w>280</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>Operationskontrakt: Operation: createPerson (name, address, postalCode, city, phone)
+Postconditions: Loan is created</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>3250</x><y>820</y><w>560</w><h>200</h></coordinates><panel_attributes>Operationskontrakt: Operation: createPerson (name, address, postalCode, city, phone)
 -
 Use case: CRUD Person 
 Pre-condition: PersonContainer pc exist 
@@ -820,18 +192,7 @@ Post condition:
 · person.name became name, 
 person.address became address, 
 person.postalCode became postalCode, 
-person.city became city and person.phone became phone</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1625</x>
-      <y>505</y>
-      <w>280</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>Operation: updatePerson (originalPhone, name, address, postalCode, city, phone)
+person.city became city and person.phone became phone</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>3250</x><y>1030</y><w>560</w><h>200</h></coordinates><panel_attributes>Operation: updatePerson (originalPhone, name, address, postalCode, city, phone)
 -
 Use case: CRUD Person 
 Pre-condition: Person-object person exists 
@@ -839,227 +200,29 @@ Post condition:
 · person.name became name, 
 person.address became address, 
 person.postalCode became postalCode, 
-person.city became city and person.phone became phone</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1430</x>
-      <y>620</y>
-      <w>185</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>Operation: deletePerson (phone)
+person.city became city and person.phone became phone</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2860</x><y>1260</y><w>370</w><h>100</h></coordinates><panel_attributes>Operation: deletePerson (phone)
 -
 Use case: CRUD Person 
 Pre-condition: Person-object person exists 
 Post condition:
-· person was deleted</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>0</x>
-      <y>400</y>
-      <w>55</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>_:LPCtr_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>290</x>
-      <y>400</y>
-      <w>175</w>
-      <h>20</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-2.1.1: fp = findPerson(phoneNumber : String): Person</panel_attributes>
-    <additional_attributes>330.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>460</x>
-      <y>505</y>
-      <w>55</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>_:PersonContainer_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>480</x>
-      <y>410</y>
-      <w>185</w>
-      <h>105</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-2.1.1.1: fp = findPerson(phoneNumber : String): Person</panel_attributes>
-    <additional_attributes>10.0;190.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>0</x>
-      <y>645</y>
-      <w>55</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>_:Copy_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>450</x>
-      <y>400</y>
-      <w>55</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>_:PersonCtr_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>480</x>
-      <y>515</y>
-      <w>175</w>
-      <h>75</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-2.1.1.1.1 phone = *[i=1..n]getPhoneNumber(): String</panel_attributes>
-    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>50</x>
-      <y>400</y>
-      <w>200</w>
-      <h>25</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
+· person was deleted</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>820</y><w>110</w><h>30</h></coordinates><panel_attributes>_:LPCtr_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>580</x><y>820</y><w>350</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+2.1.1: fp = findPerson(phoneNumber : String): Person</panel_attributes><additional_attributes>330;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>920</x><y>1030</y><w>110</w><h>30</h></coordinates><panel_attributes>_:PersonContainer_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>960</x><y>840</y><w>320</w><h>210</h></coordinates><panel_attributes>lt=&lt;-
+2.1.1.1: fp = findPerson(phoneNumber : String): Person</panel_attributes><additional_attributes>10;190;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>1310</y><w>110</w><h>30</h></coordinates><panel_attributes>_:Copy_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>900</x><y>820</y><w>110</w><h>30</h></coordinates><panel_attributes>_:PersonCtr_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>960</x><y>1050</y><w>310</w><h>150</h></coordinates><panel_attributes>lt=&lt;-
+2.1.1.1.1 phone = *[i=1..n]getPhoneNumber(): String</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>820</y><w>400</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
 3.1.1: lp = findLP(title : String):LP
-4.1.1: copy = findCopy(serialNumber : String) : Copy</panel_attributes>
-    <additional_attributes>10.0;20.0;380.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>0</x>
-      <y>490</y>
-      <w>55</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>_:LPContainer_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>20</x>
-      <y>410</y>
-      <w>185</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
+4.1.1: copy = findCopy(serialNumber : String) : Copy</panel_attributes><additional_attributes>10;20;380;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>1000</y><w>110</w><h>30</h></coordinates><panel_attributes>_:LPContainer_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>40</x><y>840</y><w>320</w><h>180</h></coordinates><panel_attributes>lt=&lt;-
 3.1.1.1:lp= findLP(title : String)
-4.1.1.1: copy = findCopy(serialNumber : String) : Copy</panel_attributes>
-    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>20</x>
-      <y>500</y>
-      <w>175</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
+4.1.1.1: copy = findCopy(serialNumber : String) : Copy</panel_attributes><additional_attributes>10;160;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>40</x><y>1020</y><w>300</w><h>160</h></coordinates><panel_attributes>lt=&lt;-
 3.1.1.1.1: title = *[i=1..n]getTitle(): String
-4.1.1.1.1: serial = *[i=1..n]getSerialNumber(): String</panel_attributes>
-    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>0</x>
-      <y>570</y>
-      <w>55</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>_:LP_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>460</x>
-      <y>580</y>
-      <w>55</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>_:Person_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>20</x>
-      <y>580</y>
-      <w>175</w>
-      <h>75</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-4.1.1.1.1.1 serial = *[i=1..n]getSerialNumber(): String</panel_attributes>
-    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>780</x>
-      <y>305</y>
-      <w>125</w>
-      <h>75</h>
-    </coordinates>
-    <panel_attributes>LPController
+4.1.1.1.1: serial = *[i=1..n]getSerialNumber(): String</panel_attributes><additional_attributes>10;140;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>1160</y><w>110</w><h>30</h></coordinates><panel_attributes>_:LP_</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>920</x><y>1180</y><w>110</w><h>30</h></coordinates><panel_attributes>_:Person_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>40</x><y>1180</y><w>310</w><h>150</h></coordinates><panel_attributes>lt=&lt;-
+4.1.1.1.1.1 serial = *[i=1..n]getSerialNumber(): String</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1560</x><y>630</y><w>250</w><h>150</h></coordinates><panel_attributes>LPController
 -
 -lpContainer : LPContainer
 -lp : LP
 -
 +findLP(title : String)
 +findCopy(serialNumber : String)
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>900</x>
-      <y>340</y>
-      <w>80</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>780</x>
-      <y>410</y>
-      <w>115</w>
-      <h>85</h>
-    </coordinates>
-    <panel_attributes>                                                 1
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1800</x><y>700</y><w>160</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;140;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1560</x><y>840</y><w>230</w><h>170</h></coordinates><panel_attributes>                                                 1
 LPContainer
 -
 -LPs: ArrayList&lt;LP&gt;
@@ -1069,29 +232,7 @@ _-instance : LPContainer_
 _+getInstance() : LoanContainer_
 +findLP(title String)
 +addLP(newLP : LP)
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>830</x>
-      <y>375</y>
-      <w>15</w>
-      <h>45</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>785</x>
-      <y>505</y>
-      <w>125</w>
-      <h>105</h>
-    </coordinates>
-    <panel_attributes>lps[i] : LP
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1660</x><y>770</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1570</x><y>1030</y><w>250</w><h>210</h></coordinates><panel_attributes>lps[i] : LP
 -
 -copies : ArrayList&lt;Copy&gt;
 -barcode : String
@@ -1106,18 +247,7 @@ _+getInstance() : LoanContainer_
 +getTitle(): String
 +getPublicationDate(): Date
 
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>785</x>
-      <y>625</y>
-      <w>110</w>
-      <h>65</h>
-    </coordinates>
-    <panel_attributes>copies[i] : Copy
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1570</x><y>1270</y><w>220</w><h>130</h></coordinates><panel_attributes>copies[i] : Copy
 -
 -serialNumber : String
 -purchaseDate : localDate
@@ -1125,81 +255,12 @@ _+getInstance() : LoanContainer_
 -
 +getSerialNumber():String
 +getPurchaseDate():localDate
-+getPurchasePrice():double</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>830</x>
-      <y>605</y>
-      <w>15</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>830</x>
-      <y>490</y>
-      <w>15</w>
-      <h>25</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1090</x>
-      <y>340</y>
-      <w>65</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1725</x>
-      <y>290</y>
-      <w>160</w>
-      <h>25</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
++getPurchasePrice():double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1660</x><y>1230</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1660</x><y>1000</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;30;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2180</x><y>700</y><w>130</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>110;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>3450</x><y>600</y><w>320</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
 findLP(Title)
-</panel_attributes>
-    <additional_attributes>300.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1725</x>
-      <y>305</y>
-      <w>160</w>
-      <h>20</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-LP</panel_attributes>
-    <additional_attributes>10.0;20.0;300.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1430</x>
-      <y>510</y>
-      <w>185</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>Operationskontrakt: findLP(title)
+</panel_attributes><additional_attributes>300;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>3450</x><y>630</y><w>320</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+LP</panel_attributes><additional_attributes>10;20;300;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2860</x><y>1040</y><w>370</w><h>100</h></coordinates><panel_attributes>Operationskontrakt: findLP(title)
 -
 use case: Lend LP
 Preconditions: LP exists
 Postconditions: 
-- LP is found</panel_attributes>
-    <additional_attributes/>
-  </element>
-</diagram>
+- LP is found</panel_attributes><additional_attributes></additional_attributes></element></diagram>
