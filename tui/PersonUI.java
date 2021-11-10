@@ -16,7 +16,7 @@ public class PersonUI{
     }
     
     public void findPerson(String phoneNumber){
-        if(personController.findPerson(phoneNumber) = null){
+        if(personController.findPerson(phoneNumber) == null){
             System.out.println("Person do not exist");
         }
         else{

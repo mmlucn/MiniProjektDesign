@@ -18,6 +18,6 @@ public class LPUI
     
     private int writeLPMenu(){
         TextOptions menu = new TextOptions("\n ***** LP Menu *****", "Tilbage");
-        lpController.
+        return 0;
     }
 }
