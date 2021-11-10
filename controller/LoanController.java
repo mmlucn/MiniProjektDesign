@@ -7,17 +7,26 @@ import java.time.LocalDate;
 public class LoanController
 {
     private LoanContainer loanContainer;
+    private PersonContainer personContainer;
+    private LPContainer lpContainer;
     
     public LoanController()
     {
         loanContainer = LoanContainer.getInstance();
+        personContainer = PersonContainer.getInstance();
+        lpContainer = LPContainer.getInstance();
     }
     
-    public Loan createLoan(String title, String loanNumber, String quality, int days){
-        return new Loan(title, loanNumber, quality, days);
+    public Loan createLoan(String phoneNumber, String barcode, String serialNumber, String quality, int days){
+        Person person = personContainer.findPerson(phoneNumber);
+        LP lp = lpContainer.findLP(barcode);
+        Copy copy = lp.findCopy(serialNumber);
+        Loan loan = new Loan(lp.getTitle(), "detteSkalGenereres", quality, days, person, copy);
+        loanContainer.addLoan(loan);
+        return null;
     }
     
-    public Person findPerson(String phoneNumber){
+    private Person findPerson(String phoneNumber){
         return null;
     }
 }
