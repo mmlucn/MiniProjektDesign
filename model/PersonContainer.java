@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class PersonContainer{
     private static PersonContainer instance;
     private ArrayList<Person> persons;    
-    public PersonContainer(){
+    private PersonContainer(){
         persons = new ArrayList<>();
    }
 

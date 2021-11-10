@@ -17,4 +17,19 @@ public class LPController{
     public Copy findCopy(String serialNumber){
         return lp.findCopy(serialNumber);
     }
+    
+    public void addLP(LP lp){
+        if (lpContainer != null){
+            lpContainer.addLP(lp);
+        }
+    }
+    
+    public LP createLP(String barcode, String title, String artist, String publicationDate)
+    {
+        return new LP(barcode, title, artist, publicationDate);
+    }
+    
+    public void addCopyToLP(Copy copy, LP lp){
+        lp.addCopy(copy);
+    }
 }

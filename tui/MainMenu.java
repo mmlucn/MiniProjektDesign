@@ -9,6 +9,7 @@ package tui;
 public class MainMenu {
     // instance variables 
     private LoanMenu loanMenu;
+    private TestData testData;
 
     /**
      * Constructor for objects of MainMenu
@@ -17,6 +18,7 @@ public class MainMenu {
         // initialise instance variables
         loanMenu = new LoanMenu();
         //Test
+        testData = new TestData();
         
     }
 
@@ -37,6 +39,7 @@ public class MainMenu {
             }
             else if(choice == 4) {
                 // TODO generate test data, this must not be part of final version
+                testData.generateData();
             }
             else {
                 writeEnd();
