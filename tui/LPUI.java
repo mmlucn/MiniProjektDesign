@@ -1,5 +1,5 @@
 package tui;
-
+import controller.*;
 
 /**
  * Write a description of class LPUI here.
@@ -9,27 +9,15 @@ package tui;
  */
 public class LPUI
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class LPUI
-     */
+    LPController lpController;
+    
     public LPUI()
     {
-        // initialise instance variables
-        x = 0;
+        lpController = new LPController();
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    private int writeLPMenu(){
+        TextOptions menu = new TextOptions("\n ***** LP Menu *****", "Tilbage");
+        lpController.
     }
 }

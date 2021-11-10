@@ -2,11 +2,12 @@ package tui;
 import controller.*;
 
 
-public class LoanUI{
+public class LoanUI
+{
     private LoanController loanController;
-    
-    public LoanUI(){
-     
+    public LoanUI()
+    {
+        loanController = new LoanController();
     }
     
     public void createLoan(String phoneNumber, String title, String serialNumber, String quality, int days){
@@ -18,5 +19,4 @@ public class LoanUI{
             System.out.println("Wrong info, try again");
         }
     }
-    
 }
