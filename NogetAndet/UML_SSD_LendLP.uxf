@@ -78,13 +78,12 @@ fg=red</panel_attributes>
     <panel_attributes>LoanController
 -
 -loanContainer : LoanContainer
--personContainer : PersonContainer
--LPContainer : LPContainer
+-personController : PersonController
+-lpController : LPController
 -
-+createLoan(returnDate: Date) : Loan
-+findPerson(phoneNumber : String) : Person
-findLP()
-+findCopy(serialNumber : String)</panel_attributes>
++createLoan(phonenumber : String, serialNumber : String, 
+quality : String, days : int) : Loan
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -211,7 +210,8 @@ _+getInstance() : LoanContainer_
     <panel_attributes>lt=&lt;-
 1.1: aLoan = createLoan(period : String): Loan
 2.1: fp = findPerson(phoneNumber : String): Person
-3.1: copy = findCopy(serialNumber : String): Copy</panel_attributes>
+3.1: lp=findLP(title : String)
+4.1: copy = findCopy(serialNumber : String): Copy</panel_attributes>
     <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -233,7 +233,7 @@ _+getInstance() : LoanContainer_
       <w>77</w>
       <h>21</h>
     </coordinates>
-    <panel_attributes>_:Loan_</panel_attributes>
+    <panel_attributes>_aLoan:Loan_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -247,7 +247,8 @@ _+getInstance() : LoanContainer_
     <panel_attributes>lt=&lt;-
 1.1.1: aLoan = &lt;&lt;create&gt;&gt;(period : String)
 2.1.2: addPerson(fp : Person) : void
-3.1.2: addCopy(copy: Copy) : void</panel_attributes>
+3.1.2: addLP(lp : LP)
+4.1.2: addCopy(copy: Copy) : void</panel_attributes>
     <additional_attributes>10.0;160.0;10.0;60.0;120.0;10.0</additional_attributes>
   </element>
   <element>
@@ -256,12 +257,13 @@ _+getInstance() : LoanContainer_
       <x>182</x>
       <y>476</y>
       <w>168</w>
-      <h>42</h>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 1: createLoan
 2: findPerson
-3: findCopy</panel_attributes>
+3: findLP
+4: findCopy</panel_attributes>
     <additional_attributes>220.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
@@ -734,14 +736,14 @@ O.K.</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>2002</x>
-      <y>560</y>
+      <y>791</y>
       <w>259</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>Operationskontrakt: findCopy(serialNumber)
 -
 use case: Lend LP
-Preconditions: Loan created
+Preconditions: LP is found
 Postconditions: 
 - Copy is found</panel_attributes>
     <additional_attributes/>
@@ -791,7 +793,7 @@ O.K.</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>2002</x>
-      <y>714</y>
+      <y>560</y>
       <w>259</w>
       <h>70</h>
     </coordinates>
@@ -846,7 +848,7 @@ person.city became city and person.phone became phone</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>2002</x>
-      <y>791</y>
+      <y>868</y>
       <w>259</w>
       <h>70</h>
     </coordinates>
@@ -944,10 +946,11 @@ Post condition:
       <x>70</x>
       <y>560</y>
       <w>280</w>
-      <h>28</h>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-3.1.1: copy = findCopy(serialNumber : String) : Copy</panel_attributes>
+3.1.1: lp = findLP(title : String):LP
+4.1.1: copy = findCopy(serialNumber : String) : Copy</panel_attributes>
     <additional_attributes>10.0;20.0;380.0;20.0</additional_attributes>
   </element>
   <element>
@@ -970,7 +973,8 @@ Post condition:
       <h>126</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-3.1.1.1: copy = findCopy(serialNumber : String) : Copy</panel_attributes>
+3.1.1.1:lp= findLP(title : String)
+4.1.1.1: copy = findCopy(serialNumber : String) : Copy</panel_attributes>
     <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -978,11 +982,12 @@ Post condition:
     <coordinates>
       <x>28</x>
       <y>700</y>
-      <w>203</w>
+      <w>245</w>
       <h>112</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-3.1.1.1.1 bc = *[i=1..n]getBarcode(): String</panel_attributes>
+3.1.1.1.1: title = *[i=1..n]getTitle(): String
+4.1.1.1.1: serial = *[i=1..n]getSerialNumber(): String</panel_attributes>
     <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -1016,7 +1021,7 @@ Post condition:
       <h>105</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-3.1.1.1.1.1 serial = *[i=1..n]getSerialNumber(): String</panel_attributes>
+4.1.1.1.1.1 serial = *[i=1..n]getSerialNumber(): String</panel_attributes>
     <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -1030,6 +1035,7 @@ Post condition:
     <panel_attributes>LPController
 -
 -lpContainer : LPContainer
+-lp : LP
 -
 +findLP(title : String)
 +findCopy(serialNumber : String)
@@ -1181,5 +1187,21 @@ findLP(Title)
     <panel_attributes>lt=&lt;.
 LP</panel_attributes>
     <additional_attributes>10.0;20.0;300.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2002</x>
+      <y>714</y>
+      <w>259</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Operationskontrakt: findLP(title)
+-
+use case: Lend LP
+Preconditions: LP exists
+Postconditions: 
+- LP is found</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
