@@ -15,13 +15,27 @@ public class LoanController{
         lpController = new LPController();
     }
     
-    public Loan createLoan(String phoneNumber, String title, String serialNumber, String quality, int days){
+    public boolean createLoan(String phoneNumber, String title, String serialNumber, String quality, int days){
+        boolean found = true;
         Person person = personController.findPerson(phoneNumber);
+        if(person == null){
+            found = false;
+        }
         LP lp = lpController.findLP(title);
+        if(lp == null){
+            found = false;
+        }
         Copy copy = lp.findCopy(serialNumber);
+        if(copy == null){
+            found = false;
+        }
         Loan loan = new Loan(lp.getTitle(), "detteSkalGenereres", quality, days, person, copy);
         loanContainer.addLoan(loan);
-        return null;
+        if(loan == null){
+            found = false;
+        }
+        
+        return found;
     }
     
 }
