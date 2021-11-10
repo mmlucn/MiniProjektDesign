@@ -17,9 +17,9 @@ public class LoanController
         lpContainer = LPContainer.getInstance();
     }
     
-    public Loan createLoan(String phoneNumber, String barcode, String serialNumber, String quality, int days){
+    public Loan createLoan(String phoneNumber, String title, String serialNumber, String quality, int days){
         Person person = personContainer.findPerson(phoneNumber);
-        LP lp = lpContainer.findLP(barcode);
+        LP lp = lpContainer.findLP(title);
         Copy copy = lp.findCopy(serialNumber);
         Loan loan = new Loan(lp.getTitle(), "detteSkalGenereres", quality, days, person, copy);
         loanContainer.addLoan(loan);

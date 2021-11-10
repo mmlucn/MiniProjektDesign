@@ -39,60 +39,8 @@ public class PersonController
         }
     }
     
-    // public Person deletePerson(String phoneNumber){
-        // Person p = null;      
-        // int index = 0;     
-        // boolean found = false; 
-        // while(index < personContainer.persons.size() && !found){
-            // p = persons.get(index); 
-            // if(p.getPhoneNumber().equals(phoneNumber).delete(person)){ 
-                // found = true;
-            // }
-            // else{
-                 // index++; 
-                // }
-         // } 
-        // if (found){
-            // return persons.get(index);
-        // }
-        // else{   
-         // return null;
-        // }
-    // }
-    
-    public Person deletePerson(String phoneNumber){
-        // Person p = findPerson(phoneNumber); 
-        // if(p != null){
-            // boolean ok = persons.remove(p); //remove an object
-            // if(ok){
-                // System.out.println("Cd with title " + person + "has been removed");
-            // }
-            // else{
-                // System.out.println("Removal failed");
-            // }
-        // }
-        // else{ 
-            // System.out.println("No CD called" + person + " within the collection");
-        // }
-        //------
-        // Iterator<Person> it = persons.iterator();
-        // while(it.hasNext()){
-            // Person p= it.next();
-            // if(p.getphoneNumber().equals(phoneNumber){
-                // it.remove();
-            // }
-            // else{
-                // system.out.println("Person not found, piss off");
-            // }
-        // }
-        
-        Person p = null;      
-        int index = 0;     
-        boolean found = false; 
-            p = persons.get(index); 
-            if(p.getPhoneNumber().equals(phoneNumber).remove(p)){ 
-        
-    }
+    public void deletePerson(String phoneNumber){
+        personContainer.deletePerson(phoneNumber);
     }
     
     public void addPerson(Person p){    

@@ -21,10 +21,10 @@ public class LPContainer
         return instance;
     }
     
-    public LP findLP(String barcode){
+    public LP findLP(String title){
         if (LPs != null){
             for (LP lp : LPs){
-                if (lp.getBarcode().equals(barcode))
+                if (lp.getTitle().equals(title))
                 {
                     return lp;
                 }
@@ -35,7 +35,7 @@ public class LPContainer
     
     public void addLP(LP newLP){
         if (LPs != null){
-        	LPs.add(newLP);
+            LPs.add(newLP);
         }
     }
     

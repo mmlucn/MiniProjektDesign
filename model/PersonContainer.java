@@ -22,6 +22,18 @@ public class PersonContainer
    public void addPerson(Person person){
        persons.add(person);
    }
+   
+   public boolean deletePerson(String phoneNumber){
+       boolean found = false;
+       Person p = findPerson(phoneNumber);
+       if(p!= null){
+           persons.remove(p);
+       }
+       else{
+           found = true;
+       }
+       return found;
+   }
 
    public Person findPerson(String phoneNumber){
         Person p = null;      
