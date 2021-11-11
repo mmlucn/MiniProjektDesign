@@ -6,7 +6,6 @@ import model.*;
 public class LPController{
     
     private LPContainer lpContainer;
-    private LP lp;
 
     public LPController(){
         lpContainer = LPContainer.getInstance();
@@ -16,26 +15,24 @@ public class LPController{
         return lpContainer.findLP(title);
     }
     
-    public Copy findCopy(String serialNumber){
-        return lp.findCopy(serialNumber);
-    }
-    
-    public void addLP(LP lp){
+    public boolean addLP(String barcode, String title, String artist, String publicationDate){
         if (lpContainer != null){
-            lpContainer.addLP(lp);
+            lpContainer.addLP(new LP(barcode, title, artist, publicationDate));
+            return true;
         }
+        return false;
     }
 
     public ArrayList<String> getAllLPs(){
         return lpContainer.getAllLPs();
     }
-    
-    public LP createLP(String barcode, String title, String artist, String publicationDate)
-    {
-        return new LP(barcode, title, artist, publicationDate);
-    }
-    
-    public void addCopyToLP(Copy copy, LP lp){
-        lp.addCopy(copy);
+
+    public boolean addCopyToLP(Copy copy, String lpTitle){
+        LP lp = lpContainer.findLP(lpTitle);
+        if (lp != null){
+            lp.addCopy(copy);
+            return true;
+        }
+        return false;
     }
 }

@@ -8,10 +8,8 @@ public class PersonController{
         personContainer = PersonContainer.getInstance();
     }
 
-    public Person createPerson(String name, String address, String postalCode, String city, 
-    String phoneNumber){    
-        Person p = new Person(name, address, postalCode, city, phoneNumber);
-        return p;
+    public void createPerson(String name, String address, String postalCode, String city, String phoneNumber){    
+        personContainer.addPerson(new Person(name, address, postalCode, city, phoneNumber));
     }
 
     public Person findPerson(String phoneNumber){

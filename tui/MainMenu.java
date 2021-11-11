@@ -11,6 +11,7 @@ public class MainMenu {
     private LoanMenu loanMenu;
     private LPUI lpui;
     private TestData testData;
+    private LoanerUI loanerUI;
     
     /**
      * Constructor for objects of MainMenu
@@ -21,7 +22,7 @@ public class MainMenu {
         lpui = new LPUI();
         //Test
         testData = new TestData();
-        
+        loanerUI = new LoanerUI();
     }
 
     public void start() { 
@@ -29,12 +30,9 @@ public class MainMenu {
         while (!exit) { //! means while exit not is true (that is: false)
             int choice = writeMainMenu();
             if(choice == 1) {
-                System.out.println(" Denne er endnu ikke implementeret");
-                
+                loanerUI.start();
             }
             else if(choice == 2) { 
-                // TODO add code here
-                System.out.println(" Denne er endnu ikke implementeret");
                 lpui.start();
             }
             else if(choice == 3) {
