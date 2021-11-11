@@ -12,7 +12,7 @@ public class LoanController{
         personController = new PersonController();
         lpController = new LPController();
     }
-    
+    //
     public boolean createLoan(String phoneNumber, String title, String quality, int days){
         boolean succes = true;
         Person person = personController.findPerson(phoneNumber);
