@@ -24,8 +24,6 @@ public class PersonContainer{
        Person p = findPerson(phoneNumber);
        if(p!= null){
            persons.remove(p);
-       }
-       else{
            found = true;
        }
        return found;

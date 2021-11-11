@@ -25,7 +25,7 @@ public class TestData
         String[] phoneNumber = {"21899699", "22442520", "29626713", "22804241", "42859281", "81281008", "22550022", "71785255", "41426780", "61280942"};
         
         for (int i = 0; i < 10; i++){
-            personController.addPerson(new Person(firstNames[i] + " " + lastNames[i], addresses[i], zipCode[i], city[i], phoneNumber[i]));
+            personController.createPerson(firstNames[i] + " " + lastNames[i], addresses[i], zipCode[i], city[i], phoneNumber[i]);
         }
         
         String[] barcode = {"978020137962", "958021135962", "528061675917", "328261665914", "328211665915", "198263605915", "828063905912", "528163605371", "571363625351", "529160605936"};
@@ -35,7 +35,7 @@ public class TestData
         
         for (int i = 0; i < 10; i++){
             lpController.addLP(barcode[i], title[i], artist[i], publicationDate[i]);
-            for (int j = 0; j < 3; j++){
+            for (int j = 0; j < 1; j++){
                 Copy copyToAdd = new Copy(randomSerial(), "10-11-2021", 50.0);
                 lpController.addCopyToLP(copyToAdd, title[i]);
             }

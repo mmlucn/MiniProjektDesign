@@ -34,8 +34,4 @@ public class PersonController{
     public void deletePerson(String phoneNumber){
         personContainer.deletePerson(phoneNumber);
     }
-    
-    public void addPerson(Person p){    
-        personContainer.addPerson(p);
-    }
 }

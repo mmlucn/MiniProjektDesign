@@ -18,6 +18,9 @@ public class LoanController{
         Person person = personController.findPerson(phoneNumber);
         LP lp = lpController.findLP(title);
         Copy copy = lp.getCopy();
+        if (copy == null)
+            return false;
+        copy.setIsAvailable(false);
         Loan loan = new Loan(lp.getTitle(), "detteSkalGenereres", quality, days, person, copy);
         if (loanContainer.addLoan(loan)){
             succes = true;

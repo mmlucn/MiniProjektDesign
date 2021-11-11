@@ -21,6 +21,11 @@ public class LoanerUI {
                 personController.createPerson(name, address, postalCode, city, phoneNumber);
                 System.out.println(name + " er blevet tilføjet til systemet.");
             }
+            if (choice == 2){
+                String phoneNumber = TextInput.inputString("Indtast tlf nr");
+                personController.deletePerson(phoneNumber);
+                System.out.println("Bruger med tlf nr " + phoneNumber + " er blevet slettet.");
+            }
             else{
                 running = false;
             }
@@ -30,6 +35,7 @@ public class LoanerUI {
     private int writeLoanerMenu(){
         TextOptions menu = new TextOptions("Låner menu", "Tilbage");
         menu.addOption("Tilføj låner");
+        menu.addOption("Fjern låner");
         int choice = menu.prompt();
         return choice;
     }

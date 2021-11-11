@@ -16,12 +16,16 @@ public class Copy {
         this.isAvailable = true;
     }
 
-    public String getSerialNumber() {
-        return serialNumber;
+    public void setIsAvailable(boolean input){
+        isAvailable = input;
     }
-
+    
     public boolean isAvailable(){
         return isAvailable;
+    }
+
+    public String getSerialNumber() {
+        return serialNumber;
     }
 
     public LocalDate getPurchaseDate() {

@@ -24,17 +24,6 @@ public class LP {
             copies.add(copy);
         }
     }
-
-    public Copy findCopy(String serialNumber){
-        if (copies != null){
-            for (Copy copy : copies){
-                if (copy.getSerialNumber().equals(serialNumber)){
-                    return copy;
-                }
-            }
-        }
-        return null;
-    }
     
     public Copy getCopy(){
         if (copies != null){
