@@ -27,6 +27,14 @@ public class Loan{
     }
 
 
+    public Person getPerson(){
+        return person;
+    }
+
+    public Copy getCopy(){
+        return copy;
+    }
+
     public String getLoanNumber() {
         return loanNumber;
     }

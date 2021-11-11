@@ -9,17 +9,20 @@ package tui;
 public class MainMenu {
     // instance variables 
     private LoanMenu loanMenu;
+    private LPUI lpui;
     private TestData testData;
-
+    private LoanerUI loanerUI;
+    
     /**
      * Constructor for objects of MainMenu
      */
     public MainMenu() {
         // initialise instance variables
         loanMenu = new LoanMenu();
+        lpui = new LPUI();
         //Test
         testData = new TestData();
-        
+        loanerUI = new LoanerUI();
     }
 
     public void start() { 
@@ -27,18 +30,16 @@ public class MainMenu {
         while (!exit) { //! means while exit not is true (that is: false)
             int choice = writeMainMenu();
             if(choice == 1) {
-                System.out.println(" Denne er endnu ikke implementeret");
-                
+                loanerUI.start();
             }
             else if(choice == 2) { 
-                // TODO add code here
-                System.out.println(" Denne er endnu ikke implementeret");
+                lpui.start();
             }
             else if(choice == 3) {
                 loanMenu.start(); 
             }
             else if(choice == 4) {
-                // TODO generate test data, this must not be part of final version
+                // Generate test data, this must not be part of final version
                 testData.generateData();
             }
             else {

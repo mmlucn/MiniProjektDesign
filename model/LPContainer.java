@@ -32,11 +32,19 @@ public class LPContainer{
         return null;
     }
     
+    
     public void addLP(LP newLP){
         if (LPs != null){
             LPs.add(newLP);
         }
     }
 
+    public ArrayList<String> getAllLPs(){
+        ArrayList<String> returnList = new ArrayList<>();
+        for (LP lp : LPs) {
+            returnList.add(lp.getTitle() + " - " + lp.getArtist());
+        }
+        return returnList;
+    }
     
 }

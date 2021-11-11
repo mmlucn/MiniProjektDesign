@@ -10,12 +10,14 @@ import controller.*;
 public class LoanMenu {
     // instance variables 
     private LoanController loanController;
+    private LPController lpController;
     /**
      * Constructor for objects of class LoanMenu
      */
     public LoanMenu() {
         // initialise instance variables
         loanController = new LoanController();
+        lpController = new LPController();
     }
     
     public void start() {
@@ -23,10 +25,18 @@ public class LoanMenu {
         while (running) {
             int choice = writeLoanMenu();
             if (choice == 1) {
-                TextInput ti = new TextInput();
-                String userPhoneNumber = ti.inputString("Indtast tlf. nr. på bruger:");
-                String lpTitle = ti.inputString("Indtast titel på LP:");
-                
+                String userPhoneNumber = TextInput.inputString("Indtast tlf. nr. på bruger:");
+                String lpTitle = TextInput.inputString("Indtast titel på LP:");
+                String lpQuality = TextInput.inputString("Indtast kvalitet på LP: ");
+                int lpDays = TextInput.inputNumber("Hvor mange dage skal den udlånes?");
+                if (loanController.createLoan(userPhoneNumber, lpTitle, lpQuality, lpDays))
+                {
+                    System.out.println("Lån oprettet");
+                }
+                else{
+                    System.out.println("Kunne ikke oprette lån.");
+                }
+
             }
             //TODO perhaps you need further menu items?
             else {
@@ -39,20 +49,9 @@ public class LoanMenu {
         // creates a keyboard object to read input
         TextOptions menu = new TextOptions("\n ***** Udlånsmenu *****", "Tilbage"); 
         menu.addOption("Opret lån");
-        //TODO if you need more menu items they have to go here
         int choice = menu.prompt();
 
         return choice;
-    }
-    
-    public void createLoan(String phoneNumber, String title, String serialNumber, String quality, int days){
-        boolean found = loanController.createLoan(phoneNumber, title, serialNumber, quality, days);
-        if(found){
-            System.out.println("Succesfull loan");
-        }
-        else{
-            System.out.println("Wrong info, try again");
-        }
     }
 
 }

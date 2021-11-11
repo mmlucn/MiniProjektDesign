@@ -19,11 +19,11 @@ public class LoanContainer{
         return instance;
     }
     
-    public void addLoan(Loan newLoan){
+    public boolean addLoan(Loan newLoan){
         if (loans != null){
             loans.add(newLoan);
+            return true;
         }
+        return false;
     }
-    
-    
 }

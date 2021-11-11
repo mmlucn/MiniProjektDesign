@@ -24,18 +24,18 @@ public class LP {
             copies.add(copy);
         }
     }
-
-    public Copy findCopy(String serialNumber){
+    
+    public Copy getCopy(){
         if (copies != null){
             for (Copy copy : copies){
-                if (copy.getSerialNumber().equals(serialNumber)){
+                if (copy.isAvailable()){
                     return copy;
                 }
             }
         }
         return null;
     }
-    
+
     public String getBarcode() {
         return barcode;
     }

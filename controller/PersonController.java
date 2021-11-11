@@ -5,13 +5,11 @@ public class PersonController{
     private PersonContainer personContainer;
     
     public PersonController(){
-        personContainer = personContainer.getInstance();
+        personContainer = PersonContainer.getInstance();
     }
 
-    public Person createPerson(String name, String address, String postalCode, String city, 
-    String phoneNumber){    
-        Person p = new Person(name, address, postalCode, city, phoneNumber);
-        return p;
+    public void createPerson(String name, String address, String postalCode, String city, String phoneNumber){    
+        personContainer.addPerson(new Person(name, address, postalCode, city, phoneNumber));
     }
 
     public Person findPerson(String phoneNumber){
@@ -35,9 +33,5 @@ public class PersonController{
     
     public void deletePerson(String phoneNumber){
         personContainer.deletePerson(phoneNumber);
-    }
-    
-    public void addPerson(Person p){    
-        personContainer.addPerson(p);
     }
 }

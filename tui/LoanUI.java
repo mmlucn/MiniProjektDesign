@@ -11,7 +11,7 @@ public class LoanUI
     }
     
     public void createLoan(String phoneNumber, String title, String serialNumber, String quality, int days){
-        boolean found = loanController.createLoan(phoneNumber, title, serialNumber, quality, days);
+        boolean found = loanController.createLoan(phoneNumber, title, quality, days);
         if(found){
             System.out.println("Succesfull loan");
         }
