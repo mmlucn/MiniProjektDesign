@@ -13,9 +13,9 @@
         },
         {
             "type": "java",
-            "name": "Launch MainClass",
+            "name": "Launch Main",
             "request": "launch",
-            "mainClass": "tui.MainClass",
+            "mainClass": "tui.Main",
             "projectName": "MiniProjektDesign"
         }
     ]
